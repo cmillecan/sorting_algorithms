@@ -54,18 +54,14 @@ int partition(int *array, int low, int high, size_t size)
 		if (array[j] < pivot)
 		{
 			i++;
-			if (array[i] != array[j])
-			{
-				swap(&array[i], &array[j]);
+			swap(&array[i], &array[j]);
+			if (i != j)
 				print_array(array, size);
-			}
 		}
 	}
-	if (array[i] != array[j])
-	{
-		swap(&array[i + 1], &array[high]);
+	swap(&array[i + 1], &array[high]);
+	if (array[i + 1] != array[high])
 		print_array(array, size);
-	}
 
 	return (i + 1);
 }
