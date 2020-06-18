@@ -12,7 +12,7 @@ void quick_sort(int *array, size_t size)
 	if (!array || size < 2)
 		return;
 
-	quick_swap(array, 0, size - 1, size);	
+	quick_swap(array, 0, size - 1, size);
 }
 /**
  * quick_swap - sorts an array of integers
@@ -31,7 +31,7 @@ void quick_swap(int *array, int low, int high, size_t size)
 
 		quick_swap(array, low, p_index - 1, size);
 		quick_swap(array, p_index + 1, high, size);
-	}	
+	}
 }
 /**
  * partition - takes the last element as a pivot to sort array
@@ -39,6 +39,8 @@ void quick_swap(int *array, int low, int high, size_t size)
  * @low: lowest int
  * @high: highest int
  * @size: array size
+ *
+ * Return: i
  */
 int partition(int *array, int low, int high, size_t size)
 {
@@ -64,9 +66,8 @@ int partition(int *array, int low, int high, size_t size)
  * swap - swaps two elements
  * @a: first element
  * @b: second element
- * @array: array
  */
-void swap(int *a, int * b)
+void swap(int *a, int *b)
 {
 	int temp;
 
